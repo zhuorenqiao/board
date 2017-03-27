@@ -2,18 +2,16 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jquery": true
     },
-    "extends": "eslint:recommended",
+  "extends": "eslint:recommended",
     "rules": {
         "indent": [
             "error",
             "tab"
         ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        "linebreak-style": 0,
         "quotes": [
             "error",
             "double"
@@ -21,6 +19,11 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+      "no-alert": 1,
+      "no-undef": 1,
+      "no-console": 1,
+      "no-unused-vars": 1,
+      "no-unused-vars": 1
     }
 }

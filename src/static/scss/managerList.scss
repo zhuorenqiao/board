@@ -1,0 +1,14 @@
+.managerList {
+  .table {
+    td {
+      display: table-cell;
+    }
+    .opera a {
+      padding: 0 5px;
+    }
+  }
+  .pagination .active a{
+    background: #efefef;
+  }
+}
+
