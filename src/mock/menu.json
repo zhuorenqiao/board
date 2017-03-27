@@ -1,0 +1,31 @@
+{
+  "status": 1000,
+  "list": [{
+      "firstMenuName": "基础管理",
+      "icon": "fa-wrench",
+      "secondMenu": [{
+        "hashId": "personnel",
+        "name": "人员管理"
+      }, {
+        "hashId": "role",
+        "name": "角色管理"
+      }, {
+        "hashId": "group",
+        "name": "分组管理"
+      }, {
+        "hashId": "device",
+        "name": "设备管理"
+      }, {
+        "hashId": "endemic",
+        "name": "病区管理"
+      }, {
+        "hashId": "menu",
+        "name": "菜单管理"
+      }, {
+        "hashId": "privilege",
+        "name": "权限管理"
+      }]
+    }
+  ]
+
+}

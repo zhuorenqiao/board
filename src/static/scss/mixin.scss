@@ -1,0 +1,4 @@
+//rem单位适配移动端像素
+@function px2rem( $px ,$designWidth: 1080){
+    @return $px*1080/$designWidth/16 + rem;
+}
