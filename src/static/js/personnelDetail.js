@@ -1,5 +1,7 @@
 $(function () {
 
+  console.log('--------------------');
+  console.log(location.href);
 
   //初始化变量
   var _id = ($("#J_iframe", window.parent.document).eq(0).attr("src")).split("?id=")[1];

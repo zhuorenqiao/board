@@ -8,19 +8,19 @@
 
   <!-- build:css lib/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
-  <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" href="/bower_components/animate.css/animate.css"/>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css lib/layer/layer.css -->
-  <link rel="stylesheet" href="/bower_components/layer/build/skin/default/layer.css" />
+  <link rel="stylesheet" href="/bower_components/layer/build/skin/default/layer.css"/>
   <!-- endbuild -->
 
-  <!-- build:css static/css/personnel.bundle.css -->
-  <link href="static/css/common.css" rel="stylesheet" />
-  <link href="static/css/style.css" rel="stylesheet" />
-  <link href="static/css/managerList.css" rel="stylesheet" />
+  <!-- build:css static/css/personnelList.css -->
+  <link href="static/css/common.css" rel="stylesheet"/>
+  <link href="static/css/style.css" rel="stylesheet"/>
+  <link href="static/css/managerList.css" rel="stylesheet"/>
   <!-- endbuild -->
 
 
@@ -28,7 +28,9 @@
 
 <body>
 
-<div class="managerList personnel">
+<input type="hidden" id="infos" data-pagelistname = "personnelList" data-detailpage = "personnelDetail" />
+
+<div class="managerList personnelList">
   <!-- 信息面板 start -->
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
@@ -38,7 +40,7 @@
           <span>基础管理</span>
         </li>
         <li class="active">
-          <span>人员管理</span>
+          <span>人员管理列表</span>
         </li>
       </ol>
     </div>
@@ -73,7 +75,7 @@
           <div class="form-group">
             <label class="control-label" for="status">状态</label>
             <select name="status" id="status" class="form-control">
-              <option value="0" selected>请选择</option>
+              <option value="0">请选择</option>
               <option value="1">有货</option>
               <option value="2">无货</option>
             </select>
@@ -82,7 +84,8 @@
         <div class="col-sm-1">
           <div class="form-group">
             <label class="control-label" for="quantity" style="visibility: hidden;">查询</label>
-            <input type="button" id="search" name="search" value="查询" placeholder="search" class="btn btn-primary form-control">
+            <input type="button" id="search" name="search" value="查询" placeholder="search"
+                   class="btn btn-primary form-control">
           </div>
         </div>
       </div>
@@ -97,7 +100,9 @@
               <thead id="theadDom" class="footable-header"></thead>
               <tbody id="tbodyDom"></tbody>
             </table>
-            <div id="pageNation" style="text-align: center"> <ul id="pageLimit"></ul> </div>
+            <div id="pageNation" style="text-align: center">
+              <ul id="pageLimit"></ul>
+            </div>
           </div>
         </div>
       </div>
@@ -129,21 +134,22 @@
 <script src="/bower_components/layer/build/layer.js"></script>
 <!-- endbuild -->
 
-<!-- build:js static/js/personnel.js -->
-<script src="static/js/personnel.js"></script>
+<!-- build:js static/js/personnelList.js -->
+<script src="static/js/personnelList.js"></script>
 <!-- endbuild -->
 <script id="rows" type="text/html">
   {{each list as item i}}
-    <tr>
-      <td>{{item.id}}</td>
-      <td>{{item.firstName}}</td>
-      <td>{{item.lastName}}</td>
-      <td>{{item.jobTitle}}</td>
-      <td>{{item.started}}</td>
-      <td>{{item.dob}}</td>
-      <td>{{item.status}}</td>
-      <td class="opera"><a data-id="{{item.id}}" class="view" href="javascript:;">查看</a><a data-id="{{item.id}}" class="del" href="javascript:;">删除</a></td>
-    </tr>
+  <tr>
+    <td>{{item.id}}</td>
+    <td>{{item.firstName}}</td>
+    <td>{{item.lastName}}</td>
+    <td>{{item.jobTitle}}</td>
+    <td>{{item.started}}</td>
+    <td>{{item.dob}}</td>
+    <td>{{item.status}}</td>
+    <td class="opera"><a data-id="{{item.id}}" class="view btn btn-primary" href="javascript:;">查看</a><a
+      data-id="{{item.id}}" class="del btn btn-primary" href="javascript:;">删除</a></td>
+  </tr>
   {{/each}}
 </script>
 </body>
