@@ -1,40 +1,47 @@
 $(function () {
 
-  var _params = {};
+	var _params = {};
+	var detailName = $("#infos").data("detailpage");
 
   //事件处理方法
 	function bindEvents() {
 
-    $('#table').on('click', '.view', function () {
-      var detailName = $('#infos').data('detailpage');
-      location.href= detailName +".html?id="+$(this).data('id');
-    });
+    //新增按钮
+		$("#newBtn").on("click", function () {
+			location.href= detailName +".html?action=new";
+		});
 
-    $('#table').on('click', '.del', function () {
+
+		$("#table").on("click", ".view", function () {
+
+			location.href= detailName +".html?id="+$(this).data("id")+"&action=view";
+		});
+
+		$("#table").on("click", ".del", function () {
       //询问框
-      layer.confirm('确定要删除吗？', {
-        btn: ['确定','取消'] //按钮
-      }, function(){
-        layer.msg('删除成功', {icon: 1});
-      });
-    });
+			layer.confirm("确定要删除吗？", {
+				btn: ["确定","取消"] //按钮
+			}, function(){
+				layer.msg("删除成功", {icon: 1});
+			});
+		});
 
-    //查询事件
-    $('.ibox-content').on('click', '#search', function () {
-      _params.product_name = $('#product_name').val();
-      _params.price = $('#price').val();
-      _params.quantity = $('#quantity').val();
-      _params.status = $('#status').val();
-      _params.page = {
-        pageNo: 1,
-        pageSize: 10
-      }
+    //点击查询列表事件
+		$(".ibox-content").on("click", "#search", function () {
+			_params.product_name = $("#product_name").val();
+			_params.price = $("#price").val();
+			_params.quantity = $("#quantity").val();
+			_params.status = $("#status").val();
+			_params.page = {
+				pageNo: 1,
+				pageSize: 10
+			};
 
-      console.log('开始查询....');
-      console.log(_params);
-      renderTabDom(_params);
-      console.log('结束查询....');
-    });
+			console.log("开始查询....");
+			console.log(_params);
+			renderTabDom(_params);
+			console.log("结束查询....");
+		});
 	}
 
   //初始化表头
@@ -72,6 +79,7 @@ $(function () {
 		});
 	}
 
+  //分页组件初始化
 	function pageInit() {
 		$("#pageLimit").bootstrapPaginator({
 			currentPage: 1,
@@ -99,7 +107,6 @@ $(function () {
 
   //入口函数
 	function init() {
-
 
 		initTableHead();
 

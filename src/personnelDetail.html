@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>管理列表-看板管理后台</title>
 
   <!-- build:css lib/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css"/>
-  <link rel="stylesheet" href="/bower_components/animate.css/animate.css"/>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -24,8 +24,8 @@
   <!-- endbuild -->
 
   <!-- build:css static/css/personnelDetail.css -->
-  <link href="static/css/common.css" rel="stylesheet">
-  <link href="static/css/style.css" rel="stylesheet">
+  <link href="static/css/common.css" rel="stylesheet"/>
+  <link href="static/css/style.css" rel="stylesheet"/>
   <!-- endbuild -->
 
 
@@ -55,400 +55,23 @@
     <div class="col-lg-12">
       <div class="tabs-container">
         <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#tab-1"> Product info</a></li>
-          <li class=""><a data-toggle="tab" href="#tab-2"> Data</a></li>
-          <li class=""><a data-toggle="tab" href="#tab-3"> Discount</a></li>
-          <li class=""><a data-toggle="tab" href="#tab-4"> Images</a></li>
+          <li class="active"><a data-toggle="tab" href="#tab-1">详情信息</a></li>
         </ul>
         <div class="tab-content">
           <div id="tab-1" class="tab-pane active">
             <div class="panel-body">
+              <form class="form-horizontal" id="managerDetailForm" method="get" action="">
+                <fieldset id="formContent">
 
-              <fieldset class="form-horizontal">
-                <div class="form-group"><label class="col-sm-2 control-label">产品名称:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="产品名称"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">价格:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="价格"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Meta Tag Title:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Meta Tag Description:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Sheets containing Lorem">
-                  </div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Meta Tag Keywords:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Lorem, Ipsum, has, been">
-                  </div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">描述:</label>
+                </fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"></label>
                   <div class="col-sm-10">
-                    <div class="summernote">
-                    </div>
+                    <button type="button" id="editor" class="btn btn-primary">编辑</button>
+                    <button type="button" id="save" class="btn btn-primary">保存</button>
                   </div>
                 </div>
-                <div class="form-group"><label class="col-sm-2 control-label"></label>
-                  <div class="col-sm-10">
-                    <button id="summernoteEdit" class="btn btn-primary type=" button
-                    ">编辑</button>
-                    <button id="summernoteSave" class="btn btn-primary type=" button
-                    ">保存</button>
-                  </div>
-                </div>
-              </fieldset>
-
-            </div>
-          </div>
-          <div id="tab-2" class="tab-pane">
-            <div class="panel-body">
-              <fieldset class="form-horizontal">
-                <div class="form-group"><label class="col-sm-2 control-label">ID:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Model:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Location:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>
-                  <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>option 1</option>
-                      <option>option 2</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Quantity:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Minimum quantity:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Sort order:</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
-                </div>
-                <div class="form-group"><label class="col-sm-2 control-label">Status:</label>
-                  <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>option 1</option>
-                      <option>option 2</option>
-                    </select>
-                  </div>
-                </div>
-              </fieldset>
-
-
-            </div>
-          </div>
-          <div id="tab-3" class="tab-pane">
-            <div class="panel-body">
-
-              <div class="table-responsive">
-                <table class="table table-stripped table-bordered">
-
-                  <thead>
-                  <tr>
-                    <th>
-                      Group
-                    </th>
-                    <th>
-                      Quantity
-                    </th>
-                    <th>
-                      Discount
-                    </th>
-                    <th style="width: 20%">
-                      Date start
-                    </th>
-                    <th style="width: 20%">
-                      Date end
-                    </th>
-                    <th>
-                      Actions
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <select class="form-control">
-                        <option selected>Group 1</option>
-                        <option>Group 2</option>
-                        <option>Group 3</option>
-                        <option>Group 4</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="10">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" placeholder="$10.00">
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="input-group date">
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text"
-                                                                                                    class="form-control"
-                                                                                                    value="07/01/2014">
-                      </div>
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  </tbody>
-
-                </table>
-              </div>
-
-            </div>
-          </div>
-          <div id="tab-4" class="tab-pane">
-            <div class="panel-body">
-              <div class="table-responsive">
-                <table class="table table-bordered table-stripped">
-                  <thead>
-                  <tr>
-                    <th>
-                      Image preview
-                    </th>
-                    <th>
-                      Image url
-                    </th>
-                    <th>
-                      Sort order
-                    </th>
-                    <th>
-                      Actions
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>
-                      <img src="img/gallery/2s.jpg">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" disabled value="http://mydomain.com/images/image1.png">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" value="1">
-                    </td>
-                    <td>
-                      <button class="btn btn-white"><i class="fa fa-trash"></i></button>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-
+              </form>
             </div>
           </div>
         </div>
@@ -456,35 +79,127 @@
     </div>
   </div>
 
-</div>
+  <!-- build:js lib/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/artTemplate/dist/template.js"></script>
+  <script src="/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+  <script src="/bower_components/metisMenu/dist/metisMenu.js"></script>
+  <!-- endbower -->
+  <script src="static/js/common.js"></script>
+  <!-- endbuild -->
 
-<!-- build:js lib/vendor.js -->
-<!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="/bower_components/artTemplate/dist/template.js"></script>
-<script src="/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
-<script src="/bower_components/metisMenu/dist/metisMenu.js"></script>
-<!-- endbower -->
-<script src="static/js/common.js"></script>
-<!-- endbuild -->
+  <!-- build:js lib/PACE/pace.js -->
+  <script src="/bower_components/PACE/pace.js"></script>
+  <!-- endbuild -->
 
-<!-- build:js lib/PACE/pace.js -->
-<script src="/bower_components/PACE/pace.js"></script>
-<!-- endbuild -->
+  <!-- build:js lib/jquery-validation/jquery.validation.js -->
+  <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+  <!-- endbuild -->
 
-<!-- build:js lib/summernote/summernote.js -->
-<script src="/bower_components/summernote/dist/summernote.js"></script>
-<script src="/bower_components/summernote/lang/summernote-zh-CN.js"></script>
-<!-- endbuild -->
 
-<!-- build:js lib/bootstrap-datepicker/bootstrap-datepicker.min.js -->
-<script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- endbuild -->
+  <!-- build:js lib/summernote/summernote.js -->
+  <script src="/bower_components/summernote/dist/summernote.js"></script>
+  <script src="/bower_components/summernote/lang/summernote-zh-CN.js"></script>
+  <!-- endbuild -->
 
-<!-- build:js static/js/personnelDetail.js -->
-<script src="static/js/personnelDetail.js"></script>
-<!-- endbuild -->
+  <!-- build:js lib/bootstrap-datepicker/bootstrap-datepicker.min.js -->
+  <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js lib/layer/layer.js -->
+  <script src="/bower_components/layer/build/layer.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js static/js/personnelDetail.js -->
+  <script src="static/js/personnelDetail.js"></script>
+  <!-- endbuild -->
+
+
+  <!--编辑详情新增 start -->
+  <script id="detailInfoNew" type="text/html">
+    <div class="form-group"><label class="col-sm-2 control-label">产品名称:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="productName" id="productName"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">价格:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="price" id="price"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">标签:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="labs" id="labs"/>
+      </div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">地址:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="address" id="address"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">电话号码:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="telphone" id="telphone"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">描述:</label>
+      <div class="col-sm-10">
+        <div class="summernote"></div>
+      </div>
+    </div>
+  </script>
+  <!--编辑详情新增 end -->
+
+  <!--详情列表查询-->
+  <script id="detailInfo" type="text/html">
+    <div class="form-group"><label class="col-sm-2 control-label">产品名称:</label>
+      <div class="col-sm-10">{{data.productName}}</div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">价格:</label>
+      <div class="col-sm-10">{{data.price}}</div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">标签:</label>
+      <div class="col-sm-10">
+        {{each data.tips as item i}}
+        <span class="btn btn-primary btn-xs">{{item}}</span>
+        {{/each}}
+      </div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">地址:</label>
+      <div class="col-sm-10">{{data.address}}</div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">电话号码:</label>
+      <div class="col-sm-10">{{data.telphone}}
+      </div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">描述:</label>
+      <div class="col-sm-10">
+        {{data.desc}}
+      </div>
+    </div>
+  </script>
+
+  <!--编辑详情修改 start -->
+  <script id="detailInfoEditor" type="text/html">
+    <div class="form-group"><label class="col-sm-2 control-label">产品名称:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="productName" id="productName" value="{{data.productName}}"/>
+      </div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">价格:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="price" id="price" value="{{data.price}}"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">标签:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="labs" id="labs" value="{{each data.tips as item i}}{{item}}{{/each}}"/>
+      </div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">地址:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="address" id="address" value="{{data.address}}"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">电话号码:</label>
+      <div class="col-sm-10"><input type="text" class="form-control" name="telphone" id="telphone" value="{{data.telphone}}"/></div>
+    </div>
+    <div class="form-group"><label class="col-sm-2 control-label">描述:</label>
+      <div class="col-sm-10">
+        <div class="summernote">{{data.desc}}</div>
+      </div>
+    </div>
+  </script>
+  <!--编辑详情修改 end -->
 
 </body>
 

@@ -140,7 +140,7 @@ gulp.task('wiredep', () => {
 
   gulp.src('src/*.html')
     .pipe(wiredep({
-      exclude: ['swiper','footable','summernote','PACE','bootstrap-datepicker','layer'],
+      exclude: ['swiper','footable','summernote','PACE','bootstrap-datepicker','layer','jquery-validation'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('src/'));
