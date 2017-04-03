@@ -30,37 +30,128 @@
     <table class="table table-bordered">
       <tbody>
         <tr>
-          <td colspan="2" class="text-center">日期</td>
-          <td>{{template}}</td>
-          <td colspan="2" class="text-center">病人总数</td>
-          <td>{{template}}</td>
-          <td>值班电话</td>
-          <td>{{template}}</td>
+          <td colspan="2" class="col-sm-1">日期</td>
+          <td class="col-sm-4">{{template}}</td>
+          <td colspan="2" class="col-sm-1">病人总数</td>
+          <td class="col-sm-4">{{template}}</td>
+          <td colspan="2" class="col-sm-1">值班电话</td>
+          <td class="col-sm-1">{{template}}</td>
         </tr>
         <tr>
           <td colspan="2">留置引流</td>
           <td>{{template}}</td>
-          <td>留置导尿</td>
+          <td colspan="2">留置导尿</td>
           <td>{{template}}</td>
-          <td>值班医生</td>
+          <td colspan="2">值班医生</td>
           <td>{{template}}</td>
         </tr>
         <tr>
-          <td colspan="2" class="text-center">出院</td>
+          <td colspan="2">出院</td>
           <td>{{template}}</td>
-          <td>洗肠</td>
+          <td colspan="2">洗肠</td>
           <td>{{template}}</td>
           <td rowspan="2">总住院</td>
           <td>电话</td>
           <td>{{template}}</td>
         </tr>
         <tr>
-          <td rowspan="3">今日出院</td>
+          <td rowspan="3">今日<br />出院</td>
           <td>A组</td>
-          <td>牵引</td>
+          <td></td>
+          <td colspan="2">牵引</td>
           <td>{{template}}</td>
           <td>值班</td>
           <td>{{template}}</td>
+        </tr>
+        <tr>
+          <td>B组</td>
+          <td></td>
+          <td colspan="2">膀胱冲洗</td>
+          <td></td>
+          <td colspan="2">咨询班</td>
+          <td>王小兵</td>
+        </tr>
+        <tr>
+          <td>C组</td>
+          <td></td>
+          <td rowspan="2" colspan="2">血糖测定</td>
+          <td rowspan="2">{{template}}</td>
+          <td colspan="2">口腔护理</td>
+          <td>{{template}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">今日手术</td>
+          <td>{{template}}</td>
+          <td rowspan="3" colspan="2">转床</td>
+          <td rowspan="3">{{template}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">明日手术</td>
+          <td>{{template}}</td>
+          <td colspan="2">雾化吸入</td>
+          <td>{{template}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">病重</td>
+          <td>{{template}}</td>
+          <td colspan="2">心电监控</td>
+          <td>{{template}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">病危</td>
+          <td>18</td>
+          <td rowspan="4">测<br />血<br />压<br /></td>
+          <td>Q8h</td>
+          <td></td>
+          <td colspan="2">心电监控</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td rowspan="3">一<br />级<br />护<br />理<br /></td>
+          <td>一组</td>
+          <td>04 05 07 17 19 20 21 24 30 32<br /> 04 05 07 17 19 20 21 24 30 32 </td>
+          <td>Bid</td>
+          <td>01 04 05 06</td>
+          <td rowspan="3" colspan="2">无人陪护病床</td>
+          <td rowspan="3" colspan="3">{{template}}</td>
+        </tr>
+        <tr>
+          <td>二组</td>
+          <td></td>
+          <td>Tid</td>
+          <td>01 04 05 06</td>
+        </tr>
+        <tr>
+          <td>三组</td>
+          <td></td>
+          <td>其他</td>
+          <td>01 04 05 06</td>
+        </tr>
+        <tr>
+          <td colspan="2">气管切开护理</td>
+          <td></td>
+          <td colspan="2">神智瞳孔</td>
+          <td></td>
+          <td rowspan="4" colspan="2">备注</td>
+          <td rowspan="4"></td>
+        </tr>
+        <tr>
+          <td colspan="2">24小时尿量</td>
+          <td></td>
+          <td colspan="2">出入水量</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2">跌倒预防</td>
+          <td></td>
+          <td colspan="2">胰岛素治疗</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2">压疮预防</td>
+          <td></td>
+          <td colspan="2">危急值</td>
+          <td></td>
         </tr>
       </tbody>
     </table>
